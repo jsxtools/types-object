@@ -1,7 +1,8 @@
 {
   "name": "types-object",
   "description": "Literally just supporting JavaScript Object() in TypeScript",
-  "version": "0.1.0",
+  "type": "module",
+  "version": "0.1.1",
   "license": "CC0-1.0",
   "main": "index.js",
   "types": "./global.d.ts",
