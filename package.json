@@ -1,0 +1,12 @@
+{
+  "name": "types-object",
+  "description": "Literally just supporting JavaScript Object() in TypeScript",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "main": "index.js",
+  "types": "./global.d.ts",
+  "files": [
+    "global.d.ts",
+    "index.js"
+  ]
+}
