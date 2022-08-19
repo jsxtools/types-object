@@ -2,7 +2,7 @@
   "name": "types-object",
   "description": "Literally just supporting JavaScript Object() in TypeScript",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "CC0-1.0",
   "main": "index.js",
   "types": "./global.d.ts",

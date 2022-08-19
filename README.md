@@ -5,6 +5,7 @@ Literally just supporting JavaScript `Object()` in TypeScript.
 This includes typing for:
 - `Object()`
 - `new Object()`
+- `Object.create()`
 - `Object.hasOwn()`
 - `Object.getPrototypeOf()`
 - `Object.setPrototypeOf()`
