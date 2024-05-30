@@ -16,9 +16,9 @@ type ToObject<T> =
 	: T extends number ? Number
 	: T extends string ? String
 	: T extends symbol ? Symbol
-	: T extends null ? object
-	: T extends undefined ? object
-	: Extract<T, object>
+	: T extends null ? Record<PropertyKey, unknown>
+	: T extends undefined ? Record<PropertyKey, unknown>
+	: Extract<T & Record<PropertyKey, unknown>, Record<PropertyKey, unknown>>
 
 type ToPrototype<T> =
 	'prototype' extends keyof T ? T['prototype']
