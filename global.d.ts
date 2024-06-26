@@ -10,23 +10,22 @@ interface ObjectConstructor {
 }
 
 type ToObject<T> =
-	'prototype' extends keyof T ? T['prototype']
-	: T extends boolean ? Number
+	T extends boolean ? Boolean
 	: T extends bigint ? BigInt
 	: T extends number ? Number
 	: T extends string ? String
 	: T extends symbol ? Symbol
-	: T extends null ? Record<PropertyKey, unknown>
-	: T extends undefined ? Record<PropertyKey, unknown>
-	: Extract<T & Record<PropertyKey, unknown>, Record<PropertyKey, unknown>>
+	: [keyof T] extends [never]
+	? Record<never, never>
+	: T
 
 type ToPrototype<T> =
-	'prototype' extends keyof T ? T['prototype']
-	: T extends boolean ? Number
+	T extends boolean ? Boolean
 	: T extends bigint ? BigInt
 	: T extends number ? Number
 	: T extends string ? String
 	: T extends symbol ? Symbol
-	: T extends null ? never
-	: T extends undefined ? never
+	: [keyof T] extends [never]
+	? 'prototype' extends keyof T ? T['prototype']
 	: Object
+	: null
